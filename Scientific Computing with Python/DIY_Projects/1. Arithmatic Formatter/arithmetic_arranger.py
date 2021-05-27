@@ -44,6 +44,6 @@ def calculator(list):
 
 
 def arithmetic_arranger(problems, binary = None):
-    arranged_problems = 'Cum'
+    arranged_problems = 'gg'
 
     return arranged_problems
