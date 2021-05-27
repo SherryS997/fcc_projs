@@ -43,7 +43,7 @@ def calculator(list):
     return ans
 
 
-def arithmetic_arranger(problems, binary = None):
+def arithmetic_arranger(problems, tosolve = False):
     arranged_problems = 'gg'
 
     return arranged_problems
