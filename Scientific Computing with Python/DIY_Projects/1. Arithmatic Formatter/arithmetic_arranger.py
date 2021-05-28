@@ -35,9 +35,9 @@ def calculator(list):
 
 
 def arithmetic_arranger(problems, to_solve = False):
-    if is_error(problems): return error(problems)
     arranged_problems = ''
     req = []
+    if is_error(problems): return error(problems)
     if to_solve: ans = calculator(problems)
     for problem in problems:
         dd = problem.rsplit()
@@ -59,17 +59,16 @@ def arithmetic_arranger(problems, to_solve = False):
                 this_ans = str(ans[problems.index(problem)])
                 this_ans = (' ' * (len(dd[0]) - len(this_ans))) + this_ans
                 dd.append(this_ans)
-        for char in dd:
-            req.append(char)
+        for char in dd: req.append(char)
     if to_solve: aa = len(problems)
     else: aa = 3
     for x in range(aa):
         y = x
         while y < len(req):
             word = req[y]
-            arranged_problems += word
-            arranged_problems += ' ' * 4
             if to_solve: y += 4
             else: y += 3
+            arranged_problems += word
+            if y < len(req): arranged_problems += ' ' * 4
         if x < (aa - 1): arranged_problems += '\n'
     return arranged_problems
